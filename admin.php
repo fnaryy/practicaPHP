@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Админ панель</title>
 </head>
-<body>git status
+<body>
     <h2>Админка</h2>
     
 </body>
