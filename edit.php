@@ -34,12 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Редактирование</title>
 </head>
 <body>
-<header>
-        <button onclick="document.location.href = '/index.php'" class="headerLink">Регистрация</button>
-        <button onclick="document.location.href = '/login.php'" class="headerLink">Авторизация</button>
-        <button onclick="document.location.href = '/edit.php'" class="headerLink">Редактирование</button>
-        <button onclick="document.location.href = '/admin.php'" class="headerLink">Админка</button>
-    </header>
     <h2>Редактирование</h2>
 <form method="POST">
     <input type="text" name="username" placeholder="Имя пользователя" required>

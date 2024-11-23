@@ -37,13 +37,7 @@ if ($result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Админ панель</title>
 </head>
-<body>
-<header>
-        <button onclick="document.location.href = '/index.php'" class="headerLink">Регистрация</button>
-        <button onclick="document.location.href = '/login.php'" class="headerLink">Авторизация</button>
-        <button onclick="document.location.href = '/edit.php'" class="headerLink">Редактирование</button>
-        <button onclick="document.location.href = '/admin.php'" class="headerLink">Админка</button>
-    </header>
+<body>git status
     <h2>Админка</h2>
     
 </body>
