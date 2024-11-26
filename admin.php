@@ -1,5 +1,7 @@
 <?php
-$db = new mysqli('151.248.115.10', 'root','Kwuy1mSu4Y','VershininMP-is64') or die('error');
+
+
+$db = new mysqli('192.168.199.13', 'learn','learn','learn_vershininmp-is64') or die('error');
 
 session_start();
 if (!isset($_SESSION['user_id'])) {
@@ -30,11 +32,13 @@ if ($result->num_rows > 0) {
     echo 'Пользователи отсутствуют.';
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Админ панель</title>
 </head>
 <body>
