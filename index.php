@@ -1,5 +1,8 @@
 <?php
-$db = new mysqli('151.248.115.10', 'root','Kwuy1mSu4Y','VershininMP-is64') or die('error');
+session_start();
+
+$db = new mysqli('192.168.199.13', 'learn','learn','learn_vershininmp-is64') or die('error');
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST['email'];
     $username = $_POST['username'];
@@ -14,10 +17,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     }
 
-    // Добавление нового пользователя
+
     
     if ($db->query("INSERT INTO users (username, email, password, role) VALUES ('$username', '$email', '$password', 'user')")) {
         echo 'Регистрация прошла успешно!';
+        header("Location: login.php");
+        exit();
     } else {
         echo 'Ошибка: ' . $db->error;
     }
@@ -31,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -39,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <input name = "username" type="text" placeholder = "Имя">
         <input name = "email" type="email" placeholder = "Email">
         <input name = "password" type="password" placeholder = "Пароль">
-        <input type="submit" value="Зарегистрироваться">
+        <button type="submit" value="Зарегистрироваться"></button>
     </form>
 </body>
 </html>

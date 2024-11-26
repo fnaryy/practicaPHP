@@ -3,6 +3,8 @@ session_start();
 
 $db = new mysqli('192.168.199.13', 'learn', 'learn', 'learn_vershininmp-is64') or die('error');
 
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];

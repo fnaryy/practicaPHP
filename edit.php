@@ -1,6 +1,5 @@
 <?php
 
-
 $db = new mysqli('192.168.199.13', 'learn', 'learn', 'learn_vershininmp-is64') or die('error');
 
 session_start();
